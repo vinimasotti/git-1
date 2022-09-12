@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Contact Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="simple-layout.css">
+</head>
+<body>
+<div id="content-wrapper">
+
+  <header>
+    <h2>Header</h2>
+  </header>
+  <nav class="navbar">
+    <!-- LOGO -->
+    <div class="logo">MUO</div>
+    <!-- NAVIGATION MENU -->
+    <ul class="nav-links">
+      <!-- USING CHECKBOX HACK -->
+      <input type="checkbox" id="checkbox_toggle" />
+      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+      <!-- NAVIGATION MENUS -->
+      <div class="menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About</a></li>
+        <li class="services">
+          <a href="/">Services</a>
+          <!-- DROPDOWN MENU -->
+          <ul class="dropdown">
+            <li><a href="/">Dropdown 1 </a></li>
+            <li><a href="/">Dropdown 2</a></li>
+            <li><a href="/">Dropdown 2</a></li>
+            <li><a href="/">Dropdown 3</a></li>
+            <li><a href="/">Dropdown 4</a></li>
+          </ul>
+        </li>
+        <li><a href="/">Contact</a></li>
+        <li><a href="/">Check out</a></li>
+      </div>
+    </ul>
+  </nav>
+
+  <div class="row">
+    <div class="column">
+      <h2>Contact Me</h2> 
+      <p>
+        Contact text <br>
+        Phone xxx-xxx-xxx <br>
+        Email: xxx@xxx.com.br <br>
+      </p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2382.0923085982627!2d-6.3098342838155945!3d53.34160377997798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670c4514d7b02d%3A0x2573499f814ac25a!2s754A%20S%20Circular%20Rd%2C%20Saint%20James&#39;%20(part%20of%20Phoenix%20Park)%2C%20Dublin%208%2C%20D08%20WA09!5e0!3m2!1sen!2sie!4v1638377697636!5m2!1sen!2sie"  height="450" style="width:100%" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <div class="column">
+      <h2>Contact Form</h2> 
+      <!-- Form Code -->
+      <form name="contactForm" id="contactForm" method="post" action="contactServlet" onsubmit="return checkForm()">
+
+        <label for="fname">First name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Insert your first name..">
+
+        <form action="">
+          <label for="fname">Last name</label>
+          <input type="text" id="fname" name="lastname" placeholder="Insert your last name..">
+
+
+
+        <label for="email">Your email</label>
+        <input type="text" id="email" name="email" placeholder="Enter email address">
+        <div id="email-error" class="error-message"> </div>
+ 
+
+
+
+
+
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write 
+       something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+        </form>
+    
+    </div>
+
+    
+    </div>
+
+  
+  <footer>
+    <p>Footer</p>
+  </footer>
+</div>
+</main>
+
+<script>
+  function checkForm()
+  {
+  var fname = document.forms["contactForm"]["fname"];
+  var lname = document.forms["contactForm"]["lname"];
+  var email = document.forms["contactForm"]["email"];
+  var subject = document.forms["contactForm"]["subject"];
+  var what = document.forms["contactForm"]["message"];
+
+  if (fname.value == "" )
+  {
+  window.alert( "Please enter your name." );
+  name.focus();
+  return false;
+  }
+
+  if (lname.value == "" )
+  {
+  window.alert( "Please enter your name." );
+  name.focus();
+  return false;
+  }
+
+  if (email.value == "" ){
+  window.alert( "Please enter a valid e-mail address." );
+  email.focus();
+  return false ;
+  }
+  if (email.value.indexOf( "@" , 0) < 0)
+  {
+  window.alert( "Please enter a valid e-mail address." );
+  email.focus();
+  return false ;
+  }
+  if (email.value.indexOf( "." , 0) < 0)
+  {
+  window .alert( "Please enter a valid e-mail address." );
+  email.focus();
+  return false ;
+  }
+  if (subject.value == "" )
+  {
+  window.alert( "Please enter a subject." );
+  subject.focus();
+  return false;
+  }
+  
+  if (what.value < 5)
+  {
+  alert( "Please enter a proper message" );
+  what.focus();
+  return false ;
+  }
+  return true ;
+  }</script>	
+
+ 
+</div>
+</body>
+</html>

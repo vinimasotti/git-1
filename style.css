@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+ 
+
+body{
+  color: black; background-color: darkgray(138, 137, 128);
+  font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  font-size: 80.5%/*whole document reset to 10px*/
+
+  }
+
+p{
+  
+  font-size:20px;
+  color: darkslategrey
+}
+
+h1,h2{
+  
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(7, 0, 0);
+  font-size:10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: darkgray;
+  background-color: lavender;
+}
+
+h3{
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgb(7, 0, 0);
+  font-size:15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: darkgray;
+  background-color: rgb(60, 60, 65);
+
+}
+
+a{color: rgb(42, 91, 165);}
+
+/* create my own class called red-text*/
+
+.red-text{color: red}
+
+.red-box{
+    	  width: 100px;
+        height: 100px;
+        border: 1px solid red;
+        margin: 20px;
+        background-color: seashell;
+        font-weight: 700;
+        
+    }
+
+/*#content { /*this is CSS ID selector
+  background-color: honeydew;
+  color: red;
+  font-size: 16px;
+  max-width: 900px;
+  /*css trick to center a div
+  /*div need a max-width
+  margin:0 auto;
+  padding:10px
+}*/
+
+#content-wrapper { /*this is CSS ID selector*/
+  background-color: honeydew;
+
+  font-size: 1.2 rem;/*12px font size*/
+  max-width: 900px;
+  /*css trick to center a div*/
+  /*div need a max-width*/
+  margin:0 auto;/*naring top and bottom of zero, left and right automatic means center trick*/
+  padding:10px
+}
+
+.floatright{
+  float:right;
+}
+
+.floatleft{
+  float:left;
+}
+
+.btncontainer{
+  display:flex;
+  justify-content:space-evenly;
+}
+
+.clear{
+  clear:both;
+}
+
+
+.btn{ /*primary class*/
+font-size:1.6rem;
+width: 100%;
+height: 100%;
+line-height:3.2rem;
+color: white;
+font-weight: 900;
+padding: 10px;
+display:block; /*turn my tag into a block level*/
+}
+
+.btn-danger{ /*secondary class*/
+background: red;
+border: 2px solid rgb(75, 1, 1)
+}
+
+.btn-success{
+background:rgb(4, 214, 4);
+border: 2px solid rgb(0, 66, 0)
+
+}
+.btn-success:hover{ /*pseudo CSS selector*/
+  background: rgb(97, 4, 4);
+}
+
+.btn-danger:hover{ /*pseudo CSS selector*/
+  background: rgb(97, 4, 4);
+}
+
+.cardcontainer{
+  border: 2px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card{
+  flex: 1 0 90%;
+  gap: 2rem;
+  border: 1px solid black;
+}
+
+@media (min-width:600px){
+  h1,h2{
+    /*color:rgb(214, 147, 4);*/
+    font-size: 2.2rem;
+  }
+
+  .btncontainer{ /*default puts block into a row*/
+    display: flex;/*think about mobile first*/
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+  }
+}
